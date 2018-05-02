@@ -41,7 +41,7 @@ using namespace std;
 
 static unsigned long get_file_size(const char *path)
 {
-	unsigned long filesize = -1;
+	unsigned long filesize = 0;
 	FILE *fp;
 	fp = fopen(path, "r");
 	if(fp == NULL)
@@ -157,7 +157,7 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 		{
 			// TODO: 在此处为应用程序的行为编写代码。
 			
-			std::unique_ptr<const char*>p(new const char*(readfile64("{\"filename\":\"D:\\\\job\\\\greatwall\\\\test\\\\1.jpg\"}")));
+			std::unique_ptr<const char*>p(new const char*(readfile64("{\"filename\":\"D:\\\\job\\\\greatwall\\\\test\\\\10000.jpg\"}")));
 			if (!*p.get())
 				return -1;
 			int len = strlen(*p.get());
